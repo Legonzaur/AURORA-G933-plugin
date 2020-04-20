@@ -48,7 +48,7 @@ public class Headset : IEffectScript
         String jsonString;
         try
         {
-            jsonString = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\..\\Local\\Logitech\\settings.json");
+            jsonString = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\..\\Local\\Logitech\\Logitech Gaming Software\\settings.json");
             var ms = new MemoryStream(Encoding.Unicode.GetBytes(jsonString));
             DataContractJsonSerializer deserializer = new DataContractJsonSerializer(typeof(LgsData));
             LgsData bsObj = (LgsData)deserializer.ReadObject(ms);
